@@ -8,7 +8,6 @@ function App() {
   return (
     <div className="App">
       <Header/>
-     
       {data.map((m) => 
         <Card 
           key={m.title} 

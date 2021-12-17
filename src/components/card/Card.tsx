@@ -3,7 +3,6 @@ import './Card.scss'
 function Card(props:any) {
     return (
         <div className='border icon'>
-            {console.log(props.image)}
             <div>{props.title}</div>
             <div>
                 {props.timeframes === 'daily'? (
