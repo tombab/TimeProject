@@ -1,10 +1,10 @@
 import React from 'react'
 import './Header.scss'
 
-function Header() {
+function Header(props:any) {
     return (
         <div className='test p-5'>
-            Header
+           Header
         </div>
     )
 }

@@ -1,11 +1,9 @@
 import './Card.scss'
 
-
 function Card(props:any) {
     return (
-        <div className='border'>
+        <div className='border icon'>
             {console.log(props.image)}
-            <img src={props.image} alt="" />
             <div>{props.title}</div>
             <div>
                 {props.timeframes === 'daily'? (

@@ -1,1 +1,31 @@
 @import "./../../variables.scss";
+
+$images: (
+  url("../../assets/self-care.svg"),
+  url("../../assets/work.svg"),
+  url("../../assets/play.svg"),
+  url("../../assets/study.svg"),
+  url("../../assets/exercise.svg"),
+  url("../../assets/social.svg")
+);
+
+@for $i from 1 through length($images) {
+  .icon:nth-child(#{length($images)}n + #{$i}) {
+    background: no-repeat center left 98% / 5% #{nth($images, $i)};
+  }
+}
+
+$color: (
+  $softOrange,
+  $lightRed,
+  $softBlue,
+  $lightRedStudy,
+  $limeGreen,
+  $violet
+);
+
+@for $i from 1 through length($color) {
+  .icon:nth-child(#{length($color)}n + #{$i}) {
+    background-color: nth($color, $i);
+  }
+}

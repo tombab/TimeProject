@@ -2,15 +2,14 @@ import './App.scss';
 import  Header  from './components/header/Header'
 import Card from './components/card/Card'
 import data from './data'
-import test from './components/assets/image-jeremy.png'
-
 
 function App() {
 
   return (
     <div className="App">
       <Header/>
-      {data.map( (m) => 
+     
+      {data.map((m) => 
         <Card 
           key={m.title} 
           title={m.title}

@@ -1,4 +1,4 @@
-[
+const data = [
   {
     "title": "Work",
     "timeframes": {
@@ -15,7 +15,7 @@
         "previous": 128
       }
     },
-    "image": "https://29.media.tumblr.com/tumblr_krxn0o9cPS1qa9hjso1_250.jpg "
+    "image": "work"
   },
   {
     "title": "Play",
@@ -33,7 +33,7 @@
         "previous": 29
       }
     },
-    "image": "/Users/tom/Desktop/Code/React/TimeProject/src/assets/entetes/Play.svg"
+    "image": "play"
   },
   {
     "title": "Study",
@@ -51,7 +51,7 @@
         "previous": 19
       }
     },
-    "image": "Study.svg"
+    "image": "study"
   },
   {
     "title": "Exercise",
@@ -69,7 +69,7 @@
         "previous": 18
       }
     },
-    "image": "Exercise.svg"
+    "image": "exercise"
   },
   {
     "title": "Social",
@@ -87,7 +87,7 @@
         "previous": 23
       }
     },
-    "image": "Social.svg"
+    "image": "social"
   },
   {
     "title": "Self Care",
@@ -105,6 +105,8 @@
         "previous": 11
       }
     },
-    "image": "Self Care.svg"
+    "image": "selfCare"
   }
 ]
+
+export default data
