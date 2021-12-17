@@ -1,10 +1,12 @@
-@import "./variables/variables.scss";
+@import "./variables.scss";
 
 .App {
   text-align: center;
   font-size: $fontSize;
   font-family: $fontFamily;
-  background-color: lightblue;
-  height: 100vh;
+  background-color: $darkBlue;
+  height: 100%;
+  min-height: 100vh;
   width: 100%;
+  color: white;
 }
