@@ -1,0 +1,11 @@
+@import "./../../variables.scss";
+
+.button {
+  border: none;
+  background: none;
+  color: $desaturatedBlue;
+  &:active,
+  &:hover {
+    color: white;
+  }
+}

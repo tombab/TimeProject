@@ -1,1 +1,10 @@
 @import "./../../variables.scss";
+
+.header {
+  background-color: $darkBlue;
+  border-radius: 25px;
+  .profilEntete {
+    background-color: $blue;
+    border-radius: 25px;
+  }
+}

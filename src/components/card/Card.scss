@@ -10,8 +10,8 @@ $images: (
 );
 
 @for $i from 1 through length($images) {
-  .icon:nth-child(#{length($images)}n + #{$i}) {
-    background: no-repeat center left 98% / 5% #{nth($images, $i)};
+  .cardContainer:nth-child(#{length($images)}n + #{$i}) {
+    background: no-repeat top -5% left 94% / 70px #{nth($images, $i)};
   }
 }
 
@@ -25,7 +25,22 @@ $color: (
 );
 
 @for $i from 1 through length($color) {
-  .icon:nth-child(#{length($color)}n + #{$i}) {
+  .cardContainer:nth-child(#{length($color)}n + #{$i}) {
     background-color: nth($color, $i);
   }
+}
+
+.cardContainer {
+  border-radius: 25px;
+  margin: 20px 0 0;
+}
+
+.enteteContainer {
+  height: 25px;
+}
+
+.textContainer {
+  border-radius: 20px;
+  background-color: $darkBlue;
+  height: 120px;
 }
