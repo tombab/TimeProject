@@ -1,25 +1,39 @@
 import './Card.scss'
+import ellipse from '../../assets/ellipse.svg'
 
 function Card(props:any) {
     return (
         <div className='cardContainer'>
             <p className='enteteContainer'></p>
             <div className='textContainer'>
-                <div>
+                <div className='current'>
                     <div>{props.title}</div>
-                    <div>
+                    <div className='currentHours'>
                         {props.timeframes === 'daily'? (
-                            <div>{props.timeframes.daily.current}{props.timeframes.daily.previous}</div>
+                            <p>{props.timeframes.daily.current}hrs</p>
                         ) : props.timeframes === 'weekly'? (
-                            <div>{props.timeframes.weekly.current}{props.timeframes.weekly.previous}</div>
+                            <p>{props.timeframes.weekly.current}hrs</p>
                         ) : (
-                            <div>{props.timeframes.monthly.current}{props.timeframes.monthly.previous}</div>
+                            <p>{props.timeframes.monthly.current}hrs</p>
                         )
                         
                         }
                     </div>
                 </div>
-                <div>
+                <div className='previous'>
+                    <img src={ellipse} alt="options" id='ellipse'/>
+                    <div>
+                        <div>{props.timeframes === 'daily'? (
+                            <p>Last Week - {props.timeframes.daily.previous}hrs</p>
+                        ) : props.timeframes === 'weekly'? (
+                            <p>Last Week - {props.timeframes.weekly.previous}hrs</p>
+                        ) : (
+                            <p>Last Week - {props.timeframes.monthly.previous}hrs</p>
+                        )
+                        
+                        }</div>
+                        
+                    </div>
                 </div>
             </div>
         </div>

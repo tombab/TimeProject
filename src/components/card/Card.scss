@@ -31,16 +31,54 @@ $color: (
 }
 
 .cardContainer {
-  border-radius: 25px;
+  border-radius: 16px;
   margin: 20px 0 0;
+  .textContainer {
+    border-radius: 15px;
+    background-color: $darkBlue;
+    min-height: 120px;
+    display: flex;
+    padding: 0 25px 0;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .current {
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    .currentHours {
+      font-size: 1.6em;
+      font-weight: 300;
+      p {
+        margin: 0;
+      }
+    }
+  }
+  .previous {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    color: $paleBlue;
+    font-size: 0.8em;
+    #ellipse {
+      padding: 20px 0;
+    }
+  }
 }
 
 .enteteContainer {
   height: 25px;
 }
 
-.textContainer {
-  border-radius: 20px;
-  background-color: $darkBlue;
-  height: 120px;
+@media screen and (min-width: 768px) {
+  .cardContainer {
+    height: 202px;
+    margin: 10px;
+    max-width: 250px;
+    .textContainer {
+      min-height: 162px;
+    }
+  }
 }
