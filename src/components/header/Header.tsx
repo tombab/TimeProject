@@ -20,9 +20,9 @@ function Header(props:any) {
                </div> 
            </div>
            <div className='selection'>
-            <Selection setTime={props.setTime} value={value.daily} />
-            <Selection setTime={props.setTime} value={value.weekly}/>
-            <Selection setTime={props.setTime} value={value.monthly}/>
+            <Selection setTime={props.setTime} value={'daily'} />
+            <Selection setTime={props.setTime} value={'weekly'}/>
+            <Selection setTime={props.setTime} value={'monthly'}/>
            </div>
         </div>
     )

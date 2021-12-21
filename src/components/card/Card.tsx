@@ -9,9 +9,9 @@ function Card(props:any) {
                 <div className='current'>
                     <div>{props.title}</div>
                     <div className='currentHours'>
-                        {props.timeframes === 'daily'? (
+                        {props.selection === 'daily'? (
                             <p>{props.timeframes.daily.current}hrs</p>
-                        ) : props.timeframes === 'weekly'? (
+                        ) : props.selection === 'weekly'? (
                             <p>{props.timeframes.weekly.current}hrs</p>
                         ) : (
                             <p>{props.timeframes.monthly.current}hrs</p>
@@ -23,9 +23,9 @@ function Card(props:any) {
                 <div className='previous'>
                     <img src={ellipse} alt="options" id='ellipse'/>
                     <div>
-                        <div>{props.timeframes === 'daily'? (
+                        <div>{props.selection === 'daily'? (
                             <p>Last Week - {props.timeframes.daily.previous}hrs</p>
-                        ) : props.timeframes === 'weekly'? (
+                        ) : props.selection === 'weekly'? (
                             <p>Last Week - {props.timeframes.weekly.previous}hrs</p>
                         ) : (
                             <p>Last Week - {props.timeframes.monthly.previous}hrs</p>

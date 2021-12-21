@@ -6,7 +6,7 @@ function Selection(props: any) {
   
   return (
     <>
-      <button className='button' onClick={props.setTime}>{props.value}</button>
+      <button className='button' onClick={props.setTime} value={props.value}>{props.value}</button>
     </>
   )
 }
