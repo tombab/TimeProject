@@ -2,7 +2,7 @@
 
 import './Selection.scss'
 
-function Selection(props: any) {
+function Selection(props:any) {
   
   return (
     <>

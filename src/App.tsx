@@ -10,8 +10,10 @@ import data from './data'
 //Le card component récupère le nouveau state et change le render
 
 function App() {
-  const [selection, setSelection] = useState("Daily")
 
+  //set le state de base sur daily
+  const [selection, setSelection] = useState("Daily")
+ //set le state sur la valeur du bouton qui est click 
   const setTime = (event:any): void => {
     setSelection(event.target.value)
   }
