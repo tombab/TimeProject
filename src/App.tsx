@@ -1,11 +1,6 @@
-import './App.scss';
-<<<<<<< Updated upstream
+import { useState } from 'react';
 
-function App() {
-  return (
-    <div className="App">
-      
-=======
+import './App.scss';
 import Header from './components/header/Header'
 import Card from './components/card/Card'
 import data from './data'
@@ -32,7 +27,7 @@ function App() {
         buttons={["Daily", "Weekly", "Monthly"]}
       />
       <div className='grid'>
-        {data.map((m) =>
+        {data.map((m:any) =>
           <Card
             key={m.title}
             title={m.title}
@@ -42,7 +37,6 @@ function App() {
           />)
         }
         </div>
->>>>>>> Stashed changes
     </div>
   );
 }
