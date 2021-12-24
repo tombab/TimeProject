@@ -3,7 +3,7 @@ import { useState } from 'react';
 import './App.scss';
 import Header from './components/header/Header'
 import Card from './components/card/Card'
-import data from './data/data'
+import data from './data'
 
 //Quand l'utilisateur clique sur daily/weekly/monthly, il set le state sur daily/weekly/monthly
 //Le card component récupère le nouveau state et change le render.
