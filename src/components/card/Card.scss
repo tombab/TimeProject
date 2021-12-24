@@ -1,4 +1,4 @@
-@import "./../../variables.scss";
+@import "../../variables/variables.scss";
 
 //images des entêtes
 @for $i from 1 through length($images) {
