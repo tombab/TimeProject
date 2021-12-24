@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/TimeProject/static/css/main.d9270e6c.css",
+    "main.js": "/TimeProject/static/js/main.83d93174.js",
+    "static/js/787.cfd8f164.chunk.js": "/TimeProject/static/js/787.cfd8f164.chunk.js",
+    "static/media/image-jeremy.png": "/TimeProject/static/media/image-jeremy.71cd41f11bee24c1ded3.png",
+    "static/media/exercise.svg": "/TimeProject/static/media/exercise.3e7b028289414a132318.svg",
+    "static/media/social.svg": "/TimeProject/static/media/social.64be0c18d185740e487b.svg",
+    "static/media/study.svg": "/TimeProject/static/media/study.1f0a65e457bfa6398827.svg",
+    "static/media/play.svg": "/TimeProject/static/media/play.e8d4e5699b0e441f8baf.svg",
+    "index.html": "/TimeProject/index.html",
+    "static/media/work.svg": "/TimeProject/static/media/work.a3f124e593ab45ba795f.svg",
+    "static/media/self-care.svg": "/TimeProject/static/media/self-care.a161aff589038fc7ce09.svg",
+    "static/media/ellipse.svg": "/TimeProject/static/media/ellipse.a57a4ac863593bb69d31b4399823f745.svg",
+    "main.d9270e6c.css.map": "/TimeProject/static/css/main.d9270e6c.css.map",
+    "main.83d93174.js.map": "/TimeProject/static/js/main.83d93174.js.map",
+    "787.cfd8f164.chunk.js.map": "/TimeProject/static/js/787.cfd8f164.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d9270e6c.css",
+    "static/js/main.83d93174.js"
+  ]
+}
