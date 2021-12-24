@@ -1,0 +1,100 @@
+@import "./../../variables.scss";
+
+.header {
+  background-color: $darkBlue;
+  border-radius: 15px;
+  .profilEntete {
+    padding: 25px 5px;
+    background-color: $blue;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img {
+      width: 70px;
+      border: solid white 4px;
+      border-radius: 50%;
+      background: white;
+    }
+    div {
+      color: $paleBlue;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-left: 15px;
+      p {
+        font-size: 0.75em;
+        margin: 0;
+      }
+      h3 {
+        display: flex;
+        font-weight: 300;
+        margin: 0;
+        color: white;
+      }
+    }
+  }
+  .selection {
+    display: flex;
+    justify-content: space-evenly;
+    height: 60px;
+    .button {
+      border: none;
+      background: none;
+      color: $desaturatedBlue;
+      margin: 0;
+      &:hover {
+        color: white;
+      }
+    }
+  }
+}
+
+.customButton {
+  border: none;
+  background: none;
+  color: $desaturatedBlue;
+  margin: 0;
+  &:hover {
+    color: white;
+  }
+}
+
+.active {
+  color: white;
+}
+
+@media screen and (min-width: 880px) {
+  .header {
+    height: 425px;
+    margin: 10px;
+    width: 200px;
+    .profilEntete {
+      height: 300px;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      padding: 25px;
+      div {
+        margin: 30px 0;
+        h3 {
+          margin: 0 30px 0 0;
+          font-size: 2em;
+        }
+      }
+    }
+    .selection {
+      flex-direction: column;
+      align-items: flex-start;
+      height: 100px;
+      margin: 10px 20px;
+      font-size: 0.8em;
+      .button {
+        font-weight: 400;
+      }
+    }
+  }
+  .customButton {
+    font-weight: 400;
+  }
+}

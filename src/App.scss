@@ -7,4 +7,24 @@
   background-color: lightblue;
   height: 100vh;
   width: 100%;
+<<<<<<< Updated upstream
+=======
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 3rem !important;
+}
+
+@media screen and (min-width: 880px) {
+  .App {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    .grid {
+      display: grid;
+      grid-template-rows: 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+>>>>>>> Stashed changes
 }

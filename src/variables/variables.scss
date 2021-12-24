@@ -32,3 +32,23 @@ $veryDarkBlue: hsl(226, 43%, 10%);
 $darkBlue: hsl(235, 46%, 20%);
 $desaturatedBlue: hsl(235, 45%, 61%);
 $paleBlue: hsl(236, 100%, 87%);
+
+//liste de couleurs à itérer dans le card component
+$color: (
+  $softOrange,
+  $lightRed,
+  $softBlue,
+  $lightRedStudy,
+  $limeGreen,
+  $violet
+);
+
+//liste d'images à itérer dans le card component
+$images: (
+  url("../../assets/self-care.svg"),
+  url("../../assets/work.svg"),
+  url("../../assets/play.svg"),
+  url("../../assets/study.svg"),
+  url("../../assets/exercise.svg"),
+  url("../../assets/social.svg")
+);

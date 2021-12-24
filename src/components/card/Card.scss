@@ -1,0 +1,132 @@
+@import "./../../variables.scss";
+
+//images des entêtes
+@for $i from 1 through length($images) {
+  .cardContainer:nth-child(#{length($images)}n + #{$i}) {
+    background: no-repeat top -5% left 94% / 70px #{nth($images, $i)};
+  }
+}
+
+//background-color des entêtes
+@for $i from 1 through length($color) {
+  .cardContainer:nth-child(#{length($color)}n + #{$i}) {
+    background-color: nth($color, $i);
+  }
+}
+
+.cardContainer {
+  border-radius: 16px;
+  margin: 20px 0 0;
+  .enteteContainer {
+    height: 25px;
+  }
+  .textContainer {
+    border-radius: 15px;
+    background-color: $darkBlue;
+    height: 120px;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 25px 10px;
+    justify-content: space-between;
+    justify-items: start;
+    align-items: center;
+    cursor: pointer;
+    &:hover {
+      background-color: #34397b;
+    }
+    .setCardTimeClicker {
+      position: absolute;
+      margin-left: -25px;
+      width: calc(100% - 96px);
+      height: 162px;
+      z-index: 2;
+    }
+    .title {
+      align-self: end;
+    }
+    .ellipsis {
+      align-self: end;
+      justify-self: end;
+      width: 40px;
+      z-index: 3;
+      .optionEllipse {
+        font-size: 0.8em;
+        position: absolute;
+        background-color: $blue;
+        padding: 10px;
+        width: 120px;
+        height: 160px;
+        border-radius: 10px;
+        margin: -10px 0 0 -110px;
+        display: none;
+        justify-content: center;
+        align-items: center;
+      }
+      .buttonActif {
+        display: flex;
+      }
+    }
+    .currentHours {
+      align-self: start;
+      font-weight: 500;
+      font-size: 1.6em;
+      font-weight: 300;
+      p {
+        margin: 0;
+      }
+    }
+    .previousHours {
+      justify-self: end;
+      color: $paleBlue;
+      font-size: 0.8em;
+      width: 140px;
+      div {
+        display: flex;
+        justify-content: flex-end;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 880px) {
+  .cardContainer {
+    height: 202px;
+    margin: 10px;
+    width: 200px;
+    .textContainer {
+      grid-template-areas:
+        "title ellipsis"
+        "currentHours currentHours"
+        "previousHours previousHours";
+      min-height: 162px;
+      padding: 20px;
+      .setCardTimeClicker {
+        position: absolute;
+        margin-left: -20px;
+        width: 200px;
+        height: 162px;
+        z-index: 2;
+      }
+      .title {
+        grid-area: title;
+      }
+      .ellipsis {
+        grid-area: ellipsis;
+      }
+      .currentHours {
+        grid-area: currentHours;
+        p {
+          font-size: 1.6em;
+        }
+      }
+      .previousHours {
+        justify-self: start;
+        grid-area: previousHours;
+        div {
+          justify-content: flex-start;
+        }
+      }
+    }
+  }
+}
