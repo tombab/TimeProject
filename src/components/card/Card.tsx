@@ -7,7 +7,7 @@ function Card(props: any) {
     //permet de définir le toggle pour l'ellipse
     const [isOpen, setIsOpen] = useState(false)
 
-    let className = 'optionEllipse';
+    let className : string = 'optionEllipse';
         if(isOpen === true)className += ' buttonActif';
 
     return (

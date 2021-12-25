@@ -14,8 +14,7 @@ const data = [
         "current": 103,
         "previous": 128
       }
-    },
-    "image": "work"
+    }
   },
   {
     "title": "Play",
@@ -32,8 +31,7 @@ const data = [
         "current": 23,
         "previous": 29
       }
-    },
-    "image": "play"
+    }
   },
   {
     "title": "Study",
@@ -50,8 +48,7 @@ const data = [
         "current": 13,
         "previous": 19
       }
-    },
-    "image": "study"
+    }
   },
   {
     "title": "Exercise",
@@ -68,8 +65,7 @@ const data = [
         "current": 11,
         "previous": 18
       }
-    },
-    "image": "exercise"
+    }
   },
   {
     "title": "Social",
@@ -86,8 +82,7 @@ const data = [
         "current": 21,
         "previous": 23
       }
-    },
-    "image": "social"
+    }
   },
   {
     "title": "Self Care",
@@ -104,8 +99,7 @@ const data = [
         "current": 7,
         "previous": 11
       }
-    },
-    "image": "selfCare"
+    }
   }
 ]
 

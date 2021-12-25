@@ -16,7 +16,6 @@ import data from './data'
             previous: number;
         };
     };
-    image:any
 }[] = data;
 
 export default database
