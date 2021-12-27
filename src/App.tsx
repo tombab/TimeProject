@@ -10,10 +10,10 @@ import data from './data'
 
 function App() {
     //set le state de base sur daily
-    const [selection, setSelection] = useState("Daily")
+    const [selection, setSelection] : [selection: string, setSelection:React.Dispatch<React.SetStateAction<string>>] = useState<string>("Daily")
 
-  //set le state lors du click sur le card components
-    const setCardTime = (): void => {
+    //set le state lors du click sur le card components
+    const setCardTime : Object = (): void => {
       selection === 'Daily' ? (setSelection('Weekly')
       ) : selection === 'Weekly' ? (setSelection('Monthly')
       ) : setSelection('Daily')
@@ -27,14 +27,14 @@ function App() {
         buttons={["Daily", "Weekly", "Monthly"]}
       />
       <div className='grid'>
-        {data.map((m:any) =>
+        {data.map((m:string | Object | any ) =>
           <Card
             key={m.title}
             title={m.title}
             timeframes={m.timeframes}
             selection={selection}
             setCardTime={setCardTime}
-          />)
+          >{console.log(typeof m.title)}</Card>)
         }
         </div>
     </div>

@@ -2,10 +2,10 @@ import { useState } from 'react';
 import './Card.scss'
 import ellipse from '../../assets/ellipse.svg'
 
-function Card(props: any) {
+function Card(props: string | any) {
 
     //permet de définir le toggle pour l'ellipse
-    const [isOpen, setIsOpen] = useState(false)
+    const [isOpen, setIsOpen] : [isOpen : boolean, setIsOpen : React.Dispatch<React.SetStateAction<boolean>>]= useState<boolean>(false)
 
     let className : string = 'optionEllipse';
         if(isOpen === true)className += ' buttonActif';

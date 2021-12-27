@@ -4,12 +4,12 @@ import './Header.scss'
 import profilPicture from '../../assets/image-jeremy.png'
 
 
-function Header(props:any) {
+function Header(props:string | any ) {
   // useState qui permet de donner l'id du button qui a été click et y ajoute la classe active
-  const [clickedId, setClickedId] = useState(-1);
+  const [clickedId, setClickedId] : [clickedId : number, setClickedId : React.Dispatch<React.SetStateAction<number>>] = useState<number>(-1);
 
   //set le state sur la valeur du bouton qui est click et change l'id pour le classname
-    const handleClick = (event:any, id:number):void => {
+    const handleClick = (event:React.ChangeEvent<HTMLButtonElement>, id:number):void => {
       setClickedId(id);
       props.setSelection(event.target.value)
     };
@@ -29,7 +29,7 @@ function Header(props:any) {
               <button
                 key={i}
                 value={buttonName}
-                onClick={(event) => handleClick(event, i)}
+                onClick={(event:any) => handleClick(event, i)}
                 className={i === clickedId ? "customButton active" : "customButton"}
               >
                 {buttonName}
