@@ -34,7 +34,7 @@ function App() {
             timeframes={m.timeframes}
             selection={selection}
             setCardTime={setCardTime}
-          >{console.log(typeof m.title)}</Card>)
+          ></Card>)
         }
         </div>
     </div>

@@ -29,7 +29,7 @@ function Header(props:string | any ) {
               <button
                 key={i}
                 value={buttonName}
-                onClick={(event:any) => handleClick(event, i)}
+                onClick={(event:number | string | Object | any ) => handleClick(event, i)}
                 className={i === clickedId ? "customButton active" : "customButton"}
               >
                 {buttonName}
