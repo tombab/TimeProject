@@ -5,7 +5,7 @@ import ellipse from '../../assets/ellipse.svg'
 function Card(props: string | any) {
 
     //permet de définir le toggle pour l'ellipse
-    const [isOpen, setIsOpen] : [isOpen : boolean, setIsOpen : React.Dispatch<React.SetStateAction<boolean>>]= useState<boolean>(false)
+    const [isOpen, setIsOpen] = useState<boolean>(false)
 
     let className : string = 'optionEllipse';
         if(isOpen === true)className += ' buttonActif';

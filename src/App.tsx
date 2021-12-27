@@ -3,14 +3,14 @@ import { useState } from 'react';
 import './App.scss';
 import Header from './components/header/Header'
 import Card from './components/card/Card'
-import data from './data'
+import data from './data/data'
 
 //Quand l'utilisateur clique sur daily/weekly/monthly, il set le state sur daily/weekly/monthly
 //Le card component récupère le nouveau state et change le render.
 
 function App() {
     //set le state de base sur daily
-    const [selection, setSelection] : [selection: string, setSelection:React.Dispatch<React.SetStateAction<string>>] = useState<string>("Daily")
+    const [selection, setSelection] = useState<string>("Daily")
 
     //set le state lors du click sur le card components
     const setCardTime : Object = (): void => {

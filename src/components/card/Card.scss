@@ -1,4 +1,4 @@
-@import "../../variables/variables.scss";
+@import "src/partials/partials.scss";
 
 //images des entêtes
 @for $i from 1 through length($images) {

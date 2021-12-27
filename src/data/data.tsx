@@ -1,4 +1,23 @@
-const data = [
+type database = {
+  title: string;
+  timeframes: {
+      daily: {
+          current: number;
+          previous: number;
+      };
+      weekly: {
+          current: number;
+          previous: number;
+      };
+      monthly: {
+          current: number;
+          previous: number;
+      };
+  };
+}[];
+
+
+const data: database = [
   {
     "title": "Work",
     "timeframes": {
@@ -102,5 +121,6 @@ const data = [
     }
   }
 ]
+
 
 export default data
