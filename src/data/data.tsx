@@ -1,20 +1,24 @@
-type database = {
+export type timeframesProp  = {
+  daily: {
+    current: number;
+    previous: number;
+};
+weekly: {
+    current: number;
+    previous: number;
+};
+monthly: {
+    current: number;
+    previous: number;
+};
+}
+
+export type database = {
   title: string;
-  timeframes: {
-      daily: {
-          current: number;
-          previous: number;
-      };
-      weekly: {
-          current: number;
-          previous: number;
-      };
-      monthly: {
-          current: number;
-          previous: number;
-      };
-  };
+  timeframes: timeframesProp;
 }[];
+
+
 
 
 const data: database = [

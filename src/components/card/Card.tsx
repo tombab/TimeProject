@@ -1,8 +1,19 @@
-import { useState } from 'react';
+import { ReactEventHandler, useState } from 'react';
 import './Card.scss'
 import ellipse from '../../assets/ellipse.svg'
+import { timeframesProp } from '../../data/data';
 
-function Card(props: string | any) {
+function Card({
+    title, 
+    timeframes, 
+    selection, 
+    setCardTime} : 
+    { 
+    title : string, 
+    timeframes : timeframesProp,
+    selection : string, 
+    setCardTime : ReactEventHandler}) 
+    {
 
     //permet de définir le toggle pour l'ellipse
     const [isOpen, setIsOpen] = useState<boolean>(false)
@@ -14,35 +25,35 @@ function Card(props: string | any) {
         <div className='cardContainer'>
             <p className='enteteContainer'></p>
             <div className='textContainer'>
-                <span className='setCardTimeClicker' onClick={props.setCardTime}></span>
+                <span className='setCardTimeClicker' onClick={setCardTime}></span>
                 <div className='title'>
-                    {props.title}
+                    {title}
                 </div>
                 <div className='ellipsis' onClick={() => setIsOpen(!isOpen)}>
                     <img src={ellipse} alt="options" id='ellipse' />
                     <span className={className}>Inserez ici les options que vous désirez</span>
                 </div>
-
+                
                 {/* affiche les current hours en fonction du click dans le bouton du header */}
                 <div className='currentHours'>
-                        {props.selection === 'Daily' ? (
-                            <p>{props.timeframes.daily.current}hrs</p>
-                        ) : props.selection === 'Weekly' ? (
-                            <p>{props.timeframes.weekly.current}hrs</p>
+                        {selection === 'Daily' ? (
+                            <p>{timeframes.daily.current}hrs</p>
+                        ) : selection === 'Weekly' ? (
+                            <p>{timeframes.weekly.current}hrs</p>
                         ) : (
-                            <p>{props.timeframes.monthly.current}hrs</p>
+                            <p>{timeframes.monthly.current}hrs</p>
                         )
                         }
                 </div>
 
                 {/* affiche les previous hours en fonction du click dans le bouton du header*/}
                 <div className='previousHours'>
-                    <div>{props.selection === 'Daily' ? (
-                        <p>Last Week - {props.timeframes.daily.previous}hrs</p>
-                    ) : props.selection === 'Weekly' ? (
-                        <p>Last Week - {props.timeframes.weekly.previous}hrs</p>
+                    <div>{selection === 'Daily' ? (
+                        <p>Last Week - {timeframes.daily.previous}hrs</p>
+                    ) : selection === 'Weekly' ? (
+                        <p>Last Week - {timeframes.weekly.previous}hrs</p>
                     ) : (
-                        <p>Last Week - {props.timeframes.monthly.previous}hrs</p>
+                        <p>Last Week - {timeframes.monthly.previous}hrs</p>
                     )
 
                     }</div>
