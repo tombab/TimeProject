@@ -29,7 +29,7 @@ function Header({ setSelection, buttons } : { setSelection:React.Dispatch<React.
               <button
                 key={i}
                 value={buttonName}
-                onClick={(event:any ) => handleClick(event, i)}
+                onClick={(event:React.MouseEvent<HTMLElement> ) => handleClick(event as any, i)}
                 className={i === clickedId ? "customButton active" : "customButton"}
               >
                 {buttonName}
